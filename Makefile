@@ -9,14 +9,14 @@
 
 ## build: Build and run server
 build:
-	go build -o ./build ./cmd/api
-	./build/api # run App
+	go build -o ./build -v .
+	./build/go-todo-api # run App
 
-## start: Start deamonized
+## start: Start demonized
 start:
 	./cmd/pmgo start ./cmd/api api-server
 
-## list: List deamon process
+## list: List daemon process
 list:
 	./cmd/pmgo list
 
@@ -24,7 +24,7 @@ list:
 logs:
 	tail -f ${HOME}/.pmgo/api-server/api-server.err
 
-## kill: Kill deamon
+## kill: Kill daemon
 kill:
 	./cmd/pmgo kill
 
